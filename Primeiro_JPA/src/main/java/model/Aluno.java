@@ -16,6 +16,7 @@ public class Aluno {
 	private String bairro;
 	private String cidade;
 	private String cep;
+	
 	public Long getId() {
 		return id;
 	}
