@@ -1,0 +1,1 @@
+Practice with JPA and a bit of Spring Boot
