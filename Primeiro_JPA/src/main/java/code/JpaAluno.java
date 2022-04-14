@@ -5,13 +5,12 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import model.Aluno;
+import utils.JPAutil;
 
 public class JpaAluno {
 	
 	public static void main (String args[]) {
-		EntityManagerFactory factory = Persistence.createEntityManagerFactory("Practice_for_TJW");
-		
-		EntityManager manager = factory.createEntityManager();
+		EntityManager manager = JPAutil.getEntityManager();
 		
 		//representa uma conexão com a unidade de persistência
 		
@@ -31,6 +30,5 @@ public class JpaAluno {
 		manager.getTransaction().commit();
 		
 		manager.close();
-		factory.close();
 	}
 }
