@@ -9,7 +9,14 @@ public class JPAremove {
 		EntityManager manager = JPAutil.getEntityManager();
 		
 		//Aluno a = manager.getReference(Aluno.class, 3L);
-		Aluno a = manager.find(Aluno.class, 2L);
+		Aluno a = manager.find(Aluno.class, 4L);
+		
+		/*O método find() recupera os dados desejados imediatamente.
+ 		 * Já o método getReference() posterga essa tarefa até a ]
+		 * primeira chamada de um método get no objeto desejado
+		 * 
+		 * /
+		 */
 		
 		manager.remove(a);
 		
